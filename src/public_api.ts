@@ -1,8 +1,8 @@
 /*
- * Public API Surface of ngx-infinitescroll
+ * Public API Surface of ngz-infinitescroll
  */
 
-export * from './lib/ngx-infinitescroll-options';
-export * from './lib/ngx-infinitescroll.service';
-export * from './lib/ngx-infinitescroll.component';
-export * from './lib/ngx-infinitescroll.module';
+export * from './lib/ngz-infinitescroll-options';
+export * from './lib/ngz-infinitescroll.service';
+export * from './lib/ngz-infinitescroll.component';
+export * from './lib/ngz-infinitescroll.module';

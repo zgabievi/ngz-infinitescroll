@@ -1,9 +1,9 @@
-# ngx-infinitescroll
+# ngz-infinitescroll
 
-[![NPM Version](https://img.shields.io/npm/v/ngx-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngx-infinitescroll)
-[![NPM Size + Gzip](https://img.shields.io/bundlephobia/minzip/ngx-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngx-infinitescroll)
-[![NPM Downloads](https://img.shields.io/npm/dt/ngx-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngx-infinitescroll)
-[![NPM License](https://img.shields.io/npm/l/ngx-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngx-infinitescroll)
+[![NPM Version](https://img.shields.io/npm/v/ngz-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngz-infinitescroll)
+[![NPM Size + Gzip](https://img.shields.io/bundlephobia/minzip/ngz-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngz-infinitescroll)
+[![NPM Downloads](https://img.shields.io/npm/dt/ngz-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngz-infinitescroll)
+[![NPM License](https://img.shields.io/npm/l/ngz-infinitescroll.svg?style=flat-square)](https://www.npmjs.com/package/ngz-infinitescroll)
 
 Angular 2+ wrapper package around [Infinite Scroll by Metafizzy](https://infinite-scroll.com). Automatically add next page.
 
@@ -21,11 +21,11 @@ Angular 2+ wrapper package around [Infinite Scroll by Metafizzy](https://infinit
 ## Installation
 
 ```bash
-npm install --save ngx-infinitescroll
+npm install --save ngz-infinitescroll
 ```
 
 ```bash
-yarn add ngx-infinitescroll
+yarn add ngz-infinitescroll
 ```
 
 ## Usage
@@ -34,13 +34,13 @@ yarn add ngx-infinitescroll
 
 ```ts
 import { NgModule } from '@angular/core';
-import { NgxInfiniteScrollModule } from 'ngx-infinitescroll';
+import { NgzInfiniteScrollModule } from 'ngz-infinitescroll';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [ AppComponent ],
-  imports: [ NgxInfiniteScrollModule ],
+  imports: [ NgzInfiniteScrollModule ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
@@ -49,28 +49,28 @@ export class AppModule { }
 **app.component.html**
 
 ```html
-<ngx-infinitescroll class="container">
+<ngz-infinitescroll class="container">
   <article class="post">...</article>
   <article class="post">...</article>
   <article class="post">...</article>
   ...
-</ngx-infinitescroll>
+</ngz-infinitescroll>
 ```
 
 ### Options
 
-You can pass options input to `ngx-ngx-infinitescroll` element;
+You can pass options input to `ngx-ngz-infinitescroll` element;
 
 ```html
-<ngx-infinitescroll [options]="{ history: false }">
+<ngz-infinitescroll [options]="{ history: false }">
   <!-- ITEMS -->
-</ngx-infinitescroll>
+</ngz-infinitescroll>
 ```
 
-or create object inside **app.component.ts** using interface `NgxInfiniteScrollOptions` and pass to element;
+or create object inside **app.component.ts** using interface `NgzInfiniteScrollOptions` and pass to element;
 
 ```ts
-infScrollOptions: NgxInfiniteScrollOptions = {
+infScrollOptions: NgzInfiniteScrollOptions = {
   path: '.pagination__next',
   append: '.post',
   history: false
@@ -78,23 +78,23 @@ infScrollOptions: NgxInfiniteScrollOptions = {
 ```
 
 ```html
-<ngx-infinitescroll [options]="infScrollOptions">
+<ngz-infinitescroll [options]="infScrollOptions">
   <!-- ITEMS -->
-</ngx-infinitescroll>
+</ngz-infinitescroll>
 ```
 
 Full list of options can be found [here](https://infinite-scroll.com/options.html).
 
 ### Events
 
-Packery element outputs some events;
+Infinite-scroll element outputs some events;
 
 For example: "Triggered when the next page has been successfully loaded, but not yet added to the container"
 
 ```html
-<ngx-infinitescroll (load)="handleLoad($event)">
+<ngz-infinitescroll (load)="handleLoad($event)">
   <!-- ITEMS -->
-</ngx-infinitescroll>
+</ngz-infinitescroll>
 ```
 
 Full list of events can be found [here](https://infinite-scroll.com/events.html).
@@ -106,7 +106,7 @@ If you want to call some methods on infinite-scroll element, you can use service
 For example if you want to load the next page you can do it:
 
 ```ts
-constructor(private infScrollService: NgxInfiniteScrollService) {}
+constructor(private infScrollService: NgzInfiniteScrollService) {}
 
 loadNextPage() {
   this.infScrollService.loadNextPage();
@@ -117,29 +117,29 @@ Full list of methods can be found [here](https://infinite-scroll.com/api.html).
 
 ## Changelog
 
-Please see [Changelog Page](https://github.com/zgabievi/ngx-infinitescroll/releases) for more information what has changed recently.
+Please see [Changelog Page](https://github.com/zgabievi/ngz-infinitescroll/releases) for more information what has changed recently.
 
 ## Paperwork
 
 ### Contributing
 
-Please see [CONTRIBUTING.md](https://github.com/zgabievi/ngx-infinitescroll/blob/master/CONTRIBUTING.md) for details.
+Please see [CONTRIBUTING.md](https://github.com/zgabievi/ngz-infinitescroll/blob/master/CONTRIBUTING.md) for details.
 
 ### Issue / Feature Request
 
-To submit an issue correctly, please follow [instructions](https://github.com/zgabievi/ngx-infinitescroll/blob/master/.github/ISSUE_TEMPLATE.md#bug-report)
+To submit an issue correctly, please follow [instructions](https://github.com/zgabievi/ngz-infinitescroll/blob/master/.github/ISSUE_TEMPLATE.md#bug-report)
 
-If you have an idea, and you want to request feature, then read [this one](https://github.com/zgabievi/ngx-infinitescroll/blob/master/.github/ISSUE_TEMPLATE.md#feature-request)
+If you have an idea, and you want to request feature, then read [this one](https://github.com/zgabievi/ngz-infinitescroll/blob/master/.github/ISSUE_TEMPLATE.md#feature-request)
 
 ### Pull Request
 
-To crearte new pull request and add your piece of work in our project, go through this [steps](https://github.com/zgabievi/ngx-infinitescroll/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
+To crearte new pull request and add your piece of work in our project, go through this [steps](https://github.com/zgabievi/ngz-infinitescroll/blob/master/.github/PULL_REQUEST_TEMPLATE.md)
 
 ## Credits
 
 - [Zura Gabievi](https://github.com/zgabievi)
-- [All contributors](https://github.com/zgabievi/ngx-infinitescroll/graphs/contributors)
+- [All contributors](https://github.com/zgabievi/ngz-infinitescroll/graphs/contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License file](https://github.com/zgabievi/ngx-infinitescroll/blob/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License file](https://github.com/zgabievi/ngz-infinitescroll/blob/master/LICENSE) for more information.

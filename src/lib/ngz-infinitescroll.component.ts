@@ -1,14 +1,14 @@
 import { Component, ElementRef, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import InfiniteScroll from 'infinite-scroll';
-import { NgxInfiniteScrollOptions } from './ngx-infinitescroll-options';
-import { NgxInfiniteScrollService } from './ngx-infinitescroll.service';
+import { NgzInfiniteScrollOptions } from './ngz-infinitescroll-options';
+import { NgzInfiniteScrollService } from './ngz-infinitescroll.service';
 
 @Component({
-  selector: 'ngx-infinitescroll',
+  selector: 'ngz-infinitescroll',
   template: `<ng-content></ng-content>`,
   styles: []
 })
-export class NgxInfiniteScrollComponent implements OnInit, OnDestroy {
+export class NgzInfiniteScrollComponent implements OnInit, OnDestroy {
   //
   @Output()
   scrollThreshold: EventEmitter<null> = new EventEmitter();
@@ -55,7 +55,7 @@ export class NgxInfiniteScrollComponent implements OnInit, OnDestroy {
 
   //
   @Input()
-  options: NgxInfiniteScrollOptions;
+  options: NgzInfiniteScrollOptions;
 
   //
   private infScroll: InfiniteScroll;
@@ -63,7 +63,7 @@ export class NgxInfiniteScrollComponent implements OnInit, OnDestroy {
   //
   constructor(
     private el: ElementRef,
-    private infScrollService: NgxInfiniteScrollService
+    private infScrollService: NgzInfiniteScrollService
   ) {}
 
   //

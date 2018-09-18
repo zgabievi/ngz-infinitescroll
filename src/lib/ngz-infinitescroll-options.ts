@@ -1,4 +1,4 @@
-export interface NgxInfiniteScrollOptions {
+export interface NgzInfiniteScrollOptions {
   //
   path?: string | Function;
 

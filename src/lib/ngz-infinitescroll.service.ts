@@ -1,10 +1,10 @@
-import InfiniteScroll from 'infinite-scroll';
 import { Injectable } from '@angular/core';
+import InfiniteScroll from 'infinite-scroll';
 import { BehaviorSubject } from 'rxjs';
-import { NgxInfiniteScrollOptions } from './ngx-infinitescroll-options';
+import { NgzInfiniteScrollOptions } from './ngz-infinitescroll-options';
 
 @Injectable()
-export class NgxInfiniteScrollService {
+export class NgzInfiniteScrollService {
   //
   action$: BehaviorSubject<{
     name: string;
@@ -31,7 +31,7 @@ export class NgxInfiniteScrollService {
   }
 
   //
-  option(options: NgxInfiniteScrollOptions) {
+  option(options: NgzInfiniteScrollOptions) {
     this.action$.next({ name: 'option', args: [options] });
   }
 
